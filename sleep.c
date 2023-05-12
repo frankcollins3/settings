@@ -13,6 +13,11 @@ int main() {
             printf("\n");
             printf("\n");            
         }
+        if (ch == 'l') {
+            printf("logout");
+            // system("logout");        // .run() => returns error: sh: line 0: logout: not login shell: use `exit'
+            system("osascript -e 'tell application \"loginwindow\" to  «event aevtrlgo»'");
+        }
     } while (ch == 'y');
 
     printf("Exiting program...\n");
